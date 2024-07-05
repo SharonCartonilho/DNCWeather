@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNC Weather</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <h1>DncWeather</h1>
+        <div class="topright">
+            <a href="">Endereços</a>
+            <a href="">&nbspPrevisão do tempo</a>
+        </div>
+    </nav>
+    <main>
+    
+        <section class="information">
+            <h1><br>Descubra Mais com Precisão:<br>Previsões do Tempo e endereços<br>em tempo real.&nbsp</h1>
+            &nbsp&nbsp&nbsp<img src="/DNC/DNC Weather/img/cloudandsun.svg" alt="" width="10%">
+        </section>
+
+        <section class="card">
+            <div class="cardrequest">
+                <p>Primeiro Nome: <br><br>
+                    <input type="text" placeholder="Insira seu primeiro nome" class="input"></p><br>
+                <p>E-mail<br><br>
+                    <input type="email" placeholder="Insira seu e-mail" class="input"></p><br>
+                <p>Digite o CEP:<br><br>
+                    <input type="number" placeholder="Insira o CEP" class="input" id="labelCep"></p><br>
+                <p>Digite a latitude e longitude para saber a previsão:<br><br>
+                    <div class="latlong">
+                        <input type="number" placeholder="Latitude" class="teste" id="labelLat">
+                        <input type="number" placeholder="Longitude" id="labelLong" class="teste"></p>
+                        <br>
+                    </div><br><br><br><br>
+                    
+                    <button class="btn" type="button" onclick="getAddressByCep(), getTemperatureByLatlong()">Acessar</button>
+                    
+                
+            </div>
+        </section>
+        <div class="result">
+            <div class="subtitle">
+                <h1> Resultado da busca por CEP: </h1>
+                <img src="/DNC/DNC Weather/img/pointer.svg" alt="" width="5%">
+            </div>
+            <section class="card2">
+                <div class="cardresult">
+                    <header>
+                        <p>Logradouro/nome</p>
+                        <p>Bairro/Distrito</p>
+                        <p>Localidade/UF</p>
+                    </header>
+                    <footer>
+                        <p id="rua"></p>
+                        <p id="bairro"></p>
+                        <p id="uf"></p>
+                    </footer>
+                </div>
+        </div>
+        </section>
+
+        <section class="tempresult">
+            <header>
+                <h1>Previsão do tempo na região:</h1>
+                <img src="/DNC/DNC Weather/img/cloud.svg" alt="" width="25%">
+            </header>
+            <footer>
+                <div class="div2">
+                    <p id="previsaoTempo">Previsão de tempo de acordo com a região: </p>
+                </div>
+            </footer>
+        </section>
+
+        
+    </main>
+    <footer class="footer">
+        <a href="">Termos de Uso |</a>
+        <a href="">&nbspPolítica de privacidade</a>
+    </footer>
+
+    
+</body>
+</html>
